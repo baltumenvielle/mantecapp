@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mantecapp</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.5.1/chart.umd.min.js"></script>
+</head>
+<body>
+  <div id="app">
+    <header class="top">
+      <h1>🧈 Mantecapp</h1>
+      <div class="row">
+        <span class="muted" id="header-sub"></span>
+      </div>
+    </header>
+
+    <nav class="tabs">
+      <button data-tab="ingredientes" class="active">Ingredientes</button>
+      <button data-tab="tortas">Tortas</button>
+      <button data-tab="ventas">Ventas</button>
+      <button data-tab="metricas">Métricas</button>
+    </nav>
+
+    <section id="tab-ingredientes" class="tab-panel active"></section>
+    <section id="tab-tortas" class="tab-panel"></section>
+    <section id="tab-ventas" class="tab-panel"></section>
+    <section id="tab-metricas" class="tab-panel"></section>
+  </div>
+
+  <div id="modal-root"></div>
+  <div id="toast-root"></div>
+
+  <script src="{{ url_for('static', filename='js/api.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/ui.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/ingredientes.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/tortas.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/ventas.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/metricas.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
